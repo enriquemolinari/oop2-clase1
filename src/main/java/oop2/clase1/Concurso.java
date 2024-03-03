@@ -13,17 +13,12 @@ public class Concurso {
     }
 
     public boolean participanteInscripto(Participante participante) {
-        boolean esta = false;
-        int i = 0;
-        List<Inscripcion> l = this.inscriptos;
-        while (!esta && i < l.size()) {
-            if (l.get(i).estaInscripto(participante)) {
-                esta = true;
-            } else {
-                i++;
+        for (Inscripcion inscripcion : this.inscriptos) {
+            if (inscripcion.estaInscripto(participante)) {
+                return true;
             }
         }
-        return esta;
+        return false;
     }
 
     public void nuevaInscripcion(Inscripcion inscripcion) {
