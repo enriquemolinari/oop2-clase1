@@ -10,4 +10,7 @@
 - Covertura
 - Refactoring
     - To for
-    - to Stream anyMatch
+    - Usando Quick Fixes to Stream anyMatch
+        - Ver otros quick fixes sugeridos luego.
+
+  
