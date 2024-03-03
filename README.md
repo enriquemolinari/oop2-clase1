@@ -6,6 +6,7 @@
 - Código Elegante
 - Testing Automatizado
     - Sin asserts no hay test
+    - Nombre de los tests
 - Covertura
 - Refactoring
     - To for
