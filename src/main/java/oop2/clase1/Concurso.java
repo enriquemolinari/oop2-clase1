@@ -13,12 +13,10 @@ public class Concurso {
     }
 
     public boolean participanteInscripto(Participante participante) {
-        for (Inscripcion inscripcion : this.inscriptos) {
-            if (inscripcion.estaInscripto(participante)) {
-                return true;
-            }
-        }
-        return false;
+        return this.inscriptos.stream()
+                .anyMatch(inscripcion -> {
+                    return inscripcion.estaInscripto(participante);
+                });
     }
 
     public void nuevaInscripcion(Inscripcion inscripcion) {
