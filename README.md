@@ -1,8 +1,12 @@
 # Objetos 2 - Clase 1
 
+- Maven
+    - Estructura de Proyecto Maven
+    - dependencias (https://www.maven.org/)
+        - External libraries
+        - comandos: mvn compile, mvn test
 - IDE: Format on save
 - IDE: Quick Fixes
-- Estructura de Proyecto Maven
 - Código Elegante
 - Testing Automatizado
     - Sin asserts no hay test
