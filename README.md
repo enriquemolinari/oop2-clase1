@@ -19,6 +19,7 @@
     - Factory Method en Inscripcion cuando hay relaciones bidireccionales
       - Evita la posibilidad que se creen instancias de inscripcion en forma inconsistente
       - El diseño permitiría a clientes hacer esto: ```unConcurso.nuevaInscripcion(new Inscripcion(jose1, otroConcurso, LocalDateTime.now()));```
-
-
-  
+    - Asistentes IA
+      - GitHub Copilot
+      - Qodo
+      - Otros
