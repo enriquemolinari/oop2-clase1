@@ -10,7 +10,8 @@
 - Primera Regla de Buenos Diseños:
     - Testeables:
         - Sin asserts no hay test
-        - Nombre de los tests
+        - Estructura de los Tests
+            - setup, ejercitación, verificación
 - Covertura
 - Segunda Regla de Código Elegante:
     - IDE: Quick Fixes
