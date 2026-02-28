@@ -12,7 +12,7 @@
         - Sin asserts no hay test
         - Estructura de los Tests
             - setup, ejercitación, verificación
-- Covertura
+- Cobertura
 - Segunda Regla de Código Elegante:
     - IDE: Quick Fixes
 - Refactoring

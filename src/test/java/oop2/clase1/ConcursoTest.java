@@ -2,9 +2,8 @@ package oop2.clase1;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDateTime;
+import java.time.LocalDateTime;import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class ConcursoTest {
     @Test
