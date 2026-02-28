@@ -1,5 +1,6 @@
 package oop2.clase1;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,8 +27,10 @@ public class Concurso {
         return esta;
     }
 
-    public void nuevaInscripcion(Inscripcion inscripcion) {
-        this.inscriptos.add(inscripcion);
+    public void nuevaInscripcion(Participante unParticipante) {
+        if (!this.participanteInscripto(unParticipante)) {
+            this.inscriptos.add(new Inscripcion(unParticipante, LocalDateTime.now()));
+        }
     }
 
     public int cantidadInscriptos() {

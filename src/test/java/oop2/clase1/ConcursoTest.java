@@ -2,7 +2,7 @@ package oop2.clase1;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDateTime;import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class ConcursoTest {
@@ -10,8 +10,7 @@ public class ConcursoTest {
     public void test01() {
         var jose = new Participante("234566", "Jose Perez");
         Concurso unConcurso = new Concurso("Un Concurso");
-        unConcurso.nuevaInscripcion(new Inscripcion(jose, unConcurso, LocalDateTime.now()));
-        //Inscripcion.inscribirAEn(jose, unConcurso);
+        unConcurso.nuevaInscripcion(jose);
         assertTrue(unConcurso.participanteInscripto(jose));
         assertEquals(1, unConcurso.cantidadInscriptos());
     }
@@ -34,8 +33,7 @@ public class ConcursoTest {
         var jose1 = new Participante("234566", "Jose Perez");
         var jose2 = new Participante("234566", "Jose Perez");
         Concurso unConcurso = new Concurso("Un Concurso");
-        unConcurso.nuevaInscripcion(new Inscripcion(jose1, unConcurso, LocalDateTime.now()));
-        //Inscripcion.inscribirAEn(jose1, unConcurso);
+        unConcurso.nuevaInscripcion(jose1);
         assertTrue(unConcurso.participanteInscripto(jose2));
         assertEquals(1, unConcurso.cantidadInscriptos());
     }
@@ -45,10 +43,8 @@ public class ConcursoTest {
         var jose1 = new Participante("234566", "Jose Perez");
         var jorge = new Participante("698712", "Jorge Saldivar");
         Concurso unConcurso = new Concurso("Un Concurso");
-        unConcurso.nuevaInscripcion(new Inscripcion(jose1, unConcurso, LocalDateTime.now()));
-        unConcurso.nuevaInscripcion(new Inscripcion(jorge, unConcurso, LocalDateTime.now()));
-//        Inscripcion.inscribirAEn(jose1, unConcurso);
-//        Inscripcion.inscribirAEn(jorge, unConcurso);
+        unConcurso.nuevaInscripcion(jose1);
+        unConcurso.nuevaInscripcion(jorge);
         assertTrue(unConcurso.participanteInscripto(jorge));
         assertEquals(2, unConcurso.cantidadInscriptos());
     }
