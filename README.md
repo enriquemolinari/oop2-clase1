@@ -4,7 +4,6 @@
     - Estructura de Proyecto Maven
     - dependencias (https://www.maven.org/)
         - External libraries
-        - comandos: mvn compile, mvn test
 - Primera Regla de Código Elegante:
     - IDE: Format on save
 - Primera Regla de Buenos Diseños:
@@ -17,6 +16,8 @@
     - IDE: Quick Fixes
 - Refactoring
     - To for
+        - Variables inncesarias (aplicar inline)
+    - nombre de métodos (mejor legibilidad, aplicar rename)
     - Usando Quick Fixes to Stream anyMatch
         - Ver otros quick fixes sugeridos luego.
     - Asistentes IA
