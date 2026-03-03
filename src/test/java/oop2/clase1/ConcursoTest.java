@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ConcursoTest {
     @Test
-    public void test01() {
+    public void inscriboUnParticipante() {
         var jose = new Participante("234566", "Jose Perez");
         Concurso unConcurso = new Concurso("Un Concurso");
         unConcurso.nuevaInscripcion(jose);
@@ -16,30 +16,31 @@ public class ConcursoTest {
     }
 
     @Test
-    public void test02() {
+    public void inscriboUnMismoParcipanteDosVecesSoloQuedaUnaVez() {
+        var jose = new Participante("234566", "Jose Perez");
+        Concurso unConcurso = new Concurso("Un Concurso");
+        unConcurso.nuevaInscripcion(jose);
+        unConcurso.nuevaInscripcion(jose);
+        assertEquals(1, unConcurso.cantidadInscriptos());
+        assertTrue(unConcurso.participanteInscripto(jose));
+    }
+
+
+    @Test
+    public void concursoNuevoNoTieneInscriptos() {
         Concurso unConcurso = new Concurso("Un Concurso");
         assertEquals(0, unConcurso.cantidadInscriptos());
     }
 
     @Test
-    public void test03() {
+    public void participanteJoseNoDebeEstarInscripto() {
         var jose = new Participante("234566", "Jose Perez");
         Concurso unConcurso = new Concurso("Un Concurso");
         assertFalse(unConcurso.participanteInscripto(jose));
     }
 
     @Test
-    public void test04() {
-        var jose1 = new Participante("234566", "Jose Perez");
-        var jose2 = new Participante("234566", "Jose Perez");
-        Concurso unConcurso = new Concurso("Un Concurso");
-        unConcurso.nuevaInscripcion(jose1);
-        assertTrue(unConcurso.participanteInscripto(jose2));
-        assertEquals(1, unConcurso.cantidadInscriptos());
-    }
-
-    @Test
-    public void test05() {
+    public void inscriboDosPersonasAmbasEstanInscriptas() {
         var jose1 = new Participante("234566", "Jose Perez");
         var jorge = new Participante("698712", "Jorge Saldivar");
         Concurso unConcurso = new Concurso("Un Concurso");
