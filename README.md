@@ -4,6 +4,11 @@
     - Estructura de Proyecto Maven
     - dependencias (https://www.maven.org/)
         - External libraries
+    - Para fijar una version dentro del proyecto:
+        - mvn -N wrapper:wrapper -Dmaven=3.8.7
+    - Luego pueden compilar, correr tests y demas así:
+        - mvn clean compile
+        - mvn test
 - Primera Regla de Código Elegante:
     - IDE: Format on save
 - Primera Regla de Buenos Diseños:
@@ -19,8 +24,6 @@
         - Variables inncesarias (aplicar inline)
     - nombre de métodos (mejor legibilidad, aplicar rename)
     - Usando Quick Fixes to Stream anyMatch
-        - Ver otros quick fixes sugeridos luego.
+        - Ver otros quick fixes sugeridos luego (volver al for).
     - Asistentes IA
         - GitHub Copilot
-        - Qodo
-        - Otros
